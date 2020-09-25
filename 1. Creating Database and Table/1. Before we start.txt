@@ -1,0 +1,7 @@
+basic 3 commands 
+
+mysql-ctl start
+mysql -cli
+mysql-ctl stop
+
+we are using gorm

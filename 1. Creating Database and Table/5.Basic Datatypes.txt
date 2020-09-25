@@ -1,0 +1,8 @@
+Numeric data types such as int, tinyint, bigint, float, real etc.
+Date and Time data types such as Date, Time, Datetime etc.
+Character and String data types such as char, varchar, text etc.
+
+basically we will use int and varchar
+
+varchar means variable length string
+varchar(100)  -> means database will store atmost string of length 100

@@ -1,0 +1,17 @@
+CREATE TABLE tablename
+  (
+    column_name data_type,
+    column_name data_type
+  );
+CREATE TABLE cats
+  (
+    name VARCHAR(100),
+    age INT
+  );
+
+
+note that: 
+
+in css we use ="";
+in object in js we use :"",
+in sql we use   space ,
