@@ -1,0 +1,8 @@
+Select * from tablename;
+(learn more ahead)
+
+
+
+example:-
+
+SELECT * FROM cats; 
