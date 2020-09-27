@@ -1,0 +1,18 @@
+CODE: DELETE Challenges Solution
+
+
+
+DELETE FROM cats WHERE age=4;
+
+
+
+SELECT * FROM cats;
+
+
+
+DELETE FROM cats WHERE cat_id=age;
+Select * from cats;
+
+DELETE FROM cats;
+
+SELECT * FROM cats;

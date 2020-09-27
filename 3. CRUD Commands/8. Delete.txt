@@ -1,0 +1,13 @@
+CODE: DELETING DATA
+DELETE FROM cats WHERE name='egg';
+
+
+SELECT * FROM cats;
+
+
+-----------------------
+to delete every row as we didnt seleted a where condition
+DELETE FROM cats;
+
+
+***remember id remains the same for  all after deletion *******
