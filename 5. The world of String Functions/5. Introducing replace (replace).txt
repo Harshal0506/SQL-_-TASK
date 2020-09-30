@@ -1,0 +1,37 @@
+
+-- In Replace case sensitivity matters .
+
+
+
+SELECT REPLACE('Hello World', 'Hell', '%$#@');
+
+SELECT REPLACE('Hello World', 'l', '7');
+
+SELECT REPLACE('Hello World', 'o', '0');
+
+SELECT REPLACE('HellO World', 'o', '*');
+
+SELECT
+  REPLACE('cheese bread coffee milk', ' ', ' and ');
+
+SELECT REPLACE(title, 'e ', '3') FROM books;
+
+-- SELECT
+--    CONCAT
+--    (
+--        SUBSTRING(title, 1, 10),
+--        '...'
+--    ) AS 'short title'
+-- FROM books;
+
+SELECT
+    SUBSTRING(REPLACE(title, 'e', '3'), 1, 10)
+FROM books;
+
+SELECT
+    SUBSTRING(REPLACE(title, 'e', '3'), 1, 10) AS 'weird string'
+FROM books;
+Notes:
+- Use cmd + /  (mac) or ctrl + /  (pc) to comment out SQL in c9.
+- The REPLACE() function, as well as the other string functions, only change the query output, they don't affect the actual data in the database.
+
