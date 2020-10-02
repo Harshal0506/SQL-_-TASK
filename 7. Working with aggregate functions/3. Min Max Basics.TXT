@@ -1,0 +1,15 @@
+SELECT MIN(released_year) 
+FROM books;
+
+SELECT MIN(released_year) FROM books;
+
+SELECT MIN(pages) FROM books;
+
+SELECT MAX(pages) 
+FROM books;
+
+SELECT MAX(released_year) 
+FROM books;
+
+SELECT MAX(pages), title   //understand this problem propertly
+FROM books;                //the output gives max of all book pages but title jo pehle h uska hi
