@@ -1,0 +1,14 @@
+CREATE TABLE items(price DECIMAL(5,2));  //total 5 place out of which 2 is for decimal
+
+INSERT INTO items(price) VALUES(7);      //7.00
+
+INSERT INTO items(price) VALUES(7987654);  //some shows error
+					   //some shows warning and insert 99.99(upper limit)
+
+INSERT INTO items(price) VALUES(34.88);   //34.88
+
+INSERT INTO items(price) VALUES(298.9999); //299.00  rounding of last 9
+
+INSERT INTO items(price) VALUES(1.9999);   //rounding and so result is 2.00
+
+SELECT * FROM items;

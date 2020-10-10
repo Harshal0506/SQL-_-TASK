@@ -1,0 +1,25 @@
+// in decimal its fixed point 
+// in float its floating type (internally exponent)
+//double take more space then float
+
+//38888888888888888888888888888888888888888892348888888888888933 ko 
+//38888888888888888888888888888888888888888892348888888888889500 
+
+so float and double use less space but may be less precise (ending ka thoda decimal alag hoga)
+
+
+CREATE TABLE thingies (price FLOAT);
+
+INSERT INTO thingies(price) VALUES (88.45);
+
+SELECT * FROM thingies;
+
+INSERT INTO thingies(price) VALUES (8877.45);
+
+SELECT * FROM thingies;
+
+//problem starts here (decimal work same but can store more info)
+
+INSERT INTO thingies(price) VALUES (8877665544.45);
+
+SELECT * FROM thingies;

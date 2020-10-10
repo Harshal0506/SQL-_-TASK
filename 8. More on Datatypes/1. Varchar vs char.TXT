@@ -1,0 +1,19 @@
+//Char take fix size and store extra  right space if less character
+// varchar can take some extra stuff then specified (just small  freedom)
+// in some compiler compiler truncate the extra stuff but some just dont take the entry
+
+
+
+CREATE TABLE dogs (name CHAR(5), breed VARCHAR(10));
+
+INSERT INTO dogs (name, breed) VALUES ('bob', 'beagle');
+
+INSERT INTO dogs (name, breed) VALUES ('robby', 'corgi');
+
+INSERT INTO dogs (name, breed) VALUES ('Princess Jane', 'Retriever'); //here its show warning
+
+SELECT * FROM dogs;
+
+INSERT INTO dogs (name, breed) VALUES ('Princess Jane', 'Retrievesadfdsafdasfsafr'); //here show warning
+
+SELECT * FROM dogs;
