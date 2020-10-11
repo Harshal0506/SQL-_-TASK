@@ -1,0 +1,7 @@
+SELECT title FROM books WHERE title LIKE 'W';   //no match as no title is 'w'
+
+
+
+SELECT title FROM books WHERE title LIKE 'W%';
+
+SELECT title FROM books WHERE title NOT LIKE 'W%';
