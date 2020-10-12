@@ -1,0 +1,10 @@
+-- TV Joins Challenge 1 SOLUTION
+
+
+
+SELECT 
+    title, 
+    rating 
+FROM series
+JOIN reviews
+    ON series.id = reviews.series_id;
