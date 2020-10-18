@@ -1,0 +1,13 @@
+**  faker.date.past();  ka format is not yyyy-mm-dd hh:mm:ss what our sql is looking for
+
+
+Try inserting one row with date in format faker give us in sql  ----> it will  set time as 00:00:00 and date as 0000-00-00
+
+now when we insert the same data using node 
+
+connection.query('insert into users set ?',person,function......
+
+its get inserted  with the correct value
+
+underneath its the code mysql package that convert our stuff
+Its the great magic of mysql node package
