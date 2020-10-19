@@ -1,0 +1,6 @@
+//app.use(express.static(__dirname+'/public');
+
+
+
+
+This is A sql course (code is just understood and copy pasted)
