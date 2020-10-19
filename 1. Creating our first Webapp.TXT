@@ -1,0 +1,17 @@
+CODE: Our First Simple Web App:
+Add to your app.js file:
+
+var express = require('express');
+
+var app = express();
+
+app.get("/", function(req, res){
+ res.send("HELLO FROM OUR WEB APP!");
+});
+
+app.listen(3000, function () {
+ console.log('App listening on port 8080!');
+});
+Remember to start the server up:
+
+node app.js 

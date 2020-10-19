@@ -1,0 +1,15 @@
+CODE: Connecting the Form
+The '/register' post route:
+
+app.post('/register', function(req,res){
+ var person = {email: req.body.email};
+ connection.query('INSERT INTO users SET ?', person, function(err, result) {
+ console.log(err);
+ console.log(result);
+ res.redirect("/");
+ });
+});
+
+
+//setting body parser and understood req.body in itself return nothing
+//unless you say app to use bodyparser
