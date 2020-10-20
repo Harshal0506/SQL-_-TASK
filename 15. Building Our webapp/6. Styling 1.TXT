@@ -1,5 +1,6 @@
 //app.use(express.static(__dirname+'/public');
-
+//  remember to on the server of sql before you run the node app.js
+(I have spent a whole day debugging this stupid person)
 
 
 

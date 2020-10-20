@@ -1,0 +1,14 @@
+DELIMITER $$
+
+CREATE TRIGGER DONT_follow_yourself
+     BEFORE INSERT ON follows FOR EACH ROW
+     BEGIN
+     if(NEW.follower_id=new.followee_id)
+     Then 
+       SIGNAL SQLSTATE '45000'
+           SET MESSAGE_TEXT='CANNOT FOLLOW YOOURSELF';
+       END IF;
+     END;
+$$
+
+DELIMITER ;

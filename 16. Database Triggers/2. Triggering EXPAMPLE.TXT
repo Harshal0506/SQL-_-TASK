@@ -1,0 +1,32 @@
+
+// Go through slides not that important
+//Copy paste when you need
+
+
+
+--> Trigger Name
+--> Trigger Time
+--> Trigger Event
+--> Triggrt Table
+--> for each row (is default)
+--> New 
+--> SQLState code
+--> MYSQLerror code
+--> Dellimiter $$
+--> reseting it to  ;
+
+--> Just coppy  paste it is how you must use it
+DELIMITER $$
+
+CREATE TRIGGER must_be_adult
+     BEFORE INSERT ON users FOR EACH ROW
+     BEGIN
+          IF NEW.age < 18
+          THEN
+              SIGNAL SQLSTATE '45000'
+                    SET MESSAGE_TEXT = 'Must be an adult!';
+          END IF;
+     END;
+$$
+
+DELIMITER ;

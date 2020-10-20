@@ -1,0 +1,16 @@
+Show triggers;                         ----> show all triggers in a messy way in given database
+
+//same as show tables ;
+
+drop trigger triggername;              ----> delete that trigger
+
+// drop table database;
+
+
+//triggers make debugging hard
+// More trigger should be avoided
+
+
+
+
+

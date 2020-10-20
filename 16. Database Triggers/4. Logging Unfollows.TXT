@@ -1,0 +1,30 @@
+//New---> When something is inserted
+//Old ---> When Something is deleted
+
+
+
+
+
+
+
+CREATE TABLE unfollows (
+    follower_id INTEGER NOT NULL,
+    followee_id INTEGER NOT NULL,
+    created_at TIMESTAMP DEFAULT NOW(),
+    FOREIGN KEY(follower_id) REFERENCES users(id),
+    FOREIGN KEY(followee_id) REFERENCES users(id),
+    PRIMARY KEY(follower_id, followee_id)
+);
+
+
+DELIMITER $$
+
+CREATE TRIGGER capture_unfollow
+     After delete  ON follows FOR EACH ROW
+     BEGIN
+     INSERT INTO unfollows(follower_id,followee_id)
+     VALUES(OLD.follower_id,old.followee_id);
+     END;
+$$
+
+DELIMITER ;
